@@ -2,9 +2,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="text-3xl font-bold underline">
-      Hello World!!!
-    </div>
+    <main className="min-h-screen bg-[#FFF0E6]">
+      <div className='flex justify-center items-center h-screen'>
+        
+      </div>
+    </main>
   );
 }
 
