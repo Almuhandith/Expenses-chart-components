@@ -1,10 +1,17 @@
 import React from 'react'
 
-const Chart = () => {
+const Chart = ({children, width, height}) => {
+  
   return (
-    <div>
-      
-    </div>
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      width='100%'
+      height='70%'
+      preserveAspectRatio='xMidyMax meet'
+      className='bg-SoftRed'
+    >
+      {children}
+    </svg>
   )
 }
 
