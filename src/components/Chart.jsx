@@ -16,11 +16,14 @@ const Chart = ({children, width, height}) => {
   )
 }
 
-export const Bar = ({ x, y, width, height, expenseName,highestExpense }) => (
+export const Bar = ({ x, y, width, value, height, expenseName,highestExpense }) => (
   <>
-    <rect x={x} y={y} width={width} height={height} rx='5' fill={ highestExpense===height ?`Cyan` : `hsl(10, 79%, 65%)`} className='rounded-xl cursor-pointer'/> 
+    <rect x={x} y={y} width={width} height={height} rx='5' fill={ highestExpense * 4===height ?`Cyan` : `hsl(10, 79%, 65%)`} className='cursor-pointer'/> 
     <text x={x} y={y - 10} className='bg-black text-white p-5'>
-       {`$${height}`}
+       {`$${value}`}
+    </text>
+    <text expenseName = {expenseName}>
+      {`${expenseName}`}
     </text>
   </>
 );

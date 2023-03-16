@@ -37,7 +37,7 @@ const data = [
 
 function App() {
   const [expensesData, setExpensesData] = useState(data);
-  const maxExpense = 200;
+  const maxExpense = 250;
   const chartHeight = maxExpense + 20;
   const barWidth = 50;
   const barMargin = 30;
@@ -67,7 +67,8 @@ function App() {
             <h1 className="font-bold text-2xl">Spending - Last 7 days</h1>
             <Chart height={chartHeight} width={width}>
               {expensesData.map((data, index) => {
-                const barHeight = data.amount;
+                const value = data.amount
+                const barHeight = data.amount * 4;
                 return (
                   <Bar
                   key={data.day}
@@ -75,8 +76,10 @@ function App() {
                   y={chartHeight - barHeight}
                   width={barWidth}
                   height={barHeight}
+                  value={value}
                   expenseName={data.day}
                   highestExpense={highestExpense}
+                  className='mb-10'
                   />
                 );
               })}
