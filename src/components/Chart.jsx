@@ -1,51 +1,28 @@
-import "./bar.css";
-import BarChart from "react-bar-chart";
-//import { useState } from "react";
-// import data2 from "../data.json";
+import React from 'react'
 
-// const Chart = ({children, width, height}) => {
+
+
+const Chart = ({children, width, height}) => {
   
-//   return (
-//     <svg
-//       viewBox={`0 0 ${width} ${height}`}
-//       width='100%'
-//       height='70%'
-//       preserveAspectRatio='xMidyMax meet'
-//       className='bg-SoftRed'
-//     >
-//       {children}
-//     </svg>
-//   )
-export default function Chart() {
-  const data = [
-    { text: "mon", value: 17.45 },
-    { text: "tue", value: 34.91 },
-    { text: "wed", value: 52.36 },
-    { text: "thu", value: 31.07 },
-    { text: "fri", value: 23.39 },
-    { text: "sat", value: 43.28 },
-    { text: "sun", value: 25.48 },
-  ];
-  const color = { color: "blue" };
-  const margin = { top: 20, right: 0, bottom: 30, left: 0 };
-  // const now = new Date().getDay();
-  const handleBarClick = (element) => {
-    //the hover effect may come here plus the color change
-    console.log(`The  ${element.text} with value ${element.value} was clicked`);
-  };
   return (
-    <div className="bar-header ">
-      <div style={{ width: "100%" }}>
-        <BarChart
-          ylabel=""
-          width={300}
-          height={200}
-          margin={margin}
-          data={data}
-          color={color}
-          onBarClick={handleBarClick}
-        />
-      </div>
-    </div>
-  );
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      width='100%'
+      height='70%'
+      preserveAspectRatio='xMidyMax meet'
+    >
+      {children}
+    </svg>
+  )
 }
+
+export const Bar = ({ x, y, width, height, expenseName,highestExpense }) => (
+  <>
+    <rect x={x} y={y} width={width} height={height} rx='5' fill={ highestExpense===height ?`Cyan` : `hsl(10, 79%, 65%)`} className='rounded-xl cursor-pointer'/> 
+    <text x={x} y={y - 10} className='bg-black text-white p-5'>
+       {`$${height}`}
+    </text>
+  </>
+);
+
+export default Chart

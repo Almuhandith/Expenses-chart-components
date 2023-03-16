@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <div className="flex justify-between items-end pt-5">
             <div>
