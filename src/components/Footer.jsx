@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
     return (
-        <div className="flex justify-between items-end pt-5">
+        <div className="flex justify-between items-end pt-7 border-t-2 border-gray-200">
             <div>
                 <h1 className="font-normal text-gray-400">Total this month</h1>
                 <p className="lg:text-5xl text-3xl font-bold">$478.33</p>
