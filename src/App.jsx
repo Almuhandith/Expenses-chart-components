@@ -70,7 +70,8 @@ function App() {
           {/* <div className="bg-white mt-5 rounded-xl p-5"> */}
           {/* <Chart height={chartHeight} width={width}>
               {expensesData.map((data, index) => {
-                const barHeight = data.amount;
+                const value = data.amount
+                const barHeight = data.amount * 4;
                 return (
                   <Bar
                     key={data.day}
