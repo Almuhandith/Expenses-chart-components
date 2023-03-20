@@ -20,11 +20,11 @@ const ChartItem = (props) => {
         onMouseLeave={hideHint}
       >
         {isHovered ? (
-          <div className="absolute top-[-2rem] md:top-[-3rem] left-[-0.2rem] md:left-[-0.8rem] w-[45px] md:w-[75px] bg-[#382314] rounded-[5px] text-xs md:text-lg font-bold text-VeryPaleOrange p-1 md:p-2 text-center block ">
+          <div className="absolute top-[-2rem] md:top-[-3rem] left-[-0.2rem] md:left-[-0.8rem] w-[45px] md:w-[75px] bg-[#382314] rounded-[5px] text-xs md:text-lg font-bold text-VeryPaleOrange p-1 md:p-2 text-center">
             ${props.sum}
           </div>
         ) : (
-          <div className="absolute top-[-2rem] md:top-[-3rem] left-[-0.2rem] md:left-[-0.8rem] w-[45px] md:w-[75px] bg-[#382314] rounded-[5px] text-xs md:text-lg font-bold text-VeryPaleOrange p-1 md:p-2 text-center hidden">
+          <div className="hidden">
             ${props.sum}
           </div>
         )}

@@ -10,7 +10,7 @@ const ChartAll = (props) => {
           return (
             <ChartItem
               key={index}
-              id={index + 1}
+              id={(index < 6) ? (index + 1) : 0} 
               sum={item.amount}
               day={item.day}
             />
